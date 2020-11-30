@@ -13,7 +13,8 @@ module.exports = {
         rules: [
             {test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/},
             {test : /\.(js)$/, use: 'babel-loader'},
-			{test : /\.css$/, use: ['style-loader', 'css-loader']},
+            {test : /\.css$/, use: ['style-loader', 'css-loader']},
+            {test: /\.(png|jpg)$/, loader: 'url-loader'},
 			{
 				test: /\.scss$/,
 				use: ['style-loader', 'css-loader', 'sass-loader']
@@ -28,5 +29,9 @@ module.exports = {
 	],
 	resolve: {
 		extensions: ['.js', '.jsx', '.scss']
-	}
+    },
+    devServer: {
+		inline: true,
+		port: 3000
+	},
 };

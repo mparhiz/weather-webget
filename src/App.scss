@@ -1,0 +1,12 @@
+.App {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+
+    .left {
+        margin: 10px;
+    }
+    .center {
+        display: grid;
+        place-items: center;
+    }
+}
